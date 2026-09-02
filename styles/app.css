@@ -111,6 +111,11 @@ a{
   -o-border-radius: 1rem;
   border-radius: 1rem;
   position: relative;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .nav__btn-line::before,
 .nav__btn-line::after{
@@ -124,10 +129,33 @@ a{
   -o-border-radius: 1rem;
   border-radius: 1rem;
   background-color: var(--orange);
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .nav__btn-line::before{
   top:-0.8rem;
 }
 .nav__btn-line::after{
   top: 0.8rem;
+}
+
+.nav__btn--open  .nav__btn-line{
+  background-color: transparent;
+}
+.nav__btn--open  .nav__btn-line::before{
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+.nav__btn--open  .nav__btn-line::after{
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
