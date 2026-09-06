@@ -1,7 +1,13 @@
+/*
+!!!!!!!!!!
+          reset styles
+!!!!!!!!!!
+*/
 :root{
   --orange:#E76F51;
   --white: #fff;
   --grey: #D2D2D2;
+  --dark: #3B3735;
 }
 html {
   box-sizing: border-box;
@@ -17,14 +23,17 @@ body {
   font-family: "Roboto";
 }
 
-/* reset styles */
 
 a{
-  text-decoration: non
+  text-decoration: none;
   
 }
 
-/* app style */
+/*
+!!!!!!!!!!
+          App Style
+!!!!!!!!!!
+*/
 
 .header{
   background: linear-gradient(rgba(59,55,53,0.5), rgba(59,55,53,0.5)), url("../images/header-bg.jpg");
@@ -47,16 +56,29 @@ a{
   display: flex;
   align-items: center;
 }
+
+/* 
+!!!!!!!!!!
+          App Logo
+!!!!!!!!!!
+*/
+
 .app-logo{
   display: block;
   width: 5.5rem;
   height: 5.5rem;
+  margin-right: 4rem;
 }
 .app-logo__img{
   width: 100%;
   height: 100%;
   margin-right: 3rem;
 }
+/* 
+!!!!!!!!!!
+          Desktop Menu
+!!!!!!!!!!
+*/
 .menu{
   display: none;
 
@@ -67,7 +89,47 @@ a{
 }
 .menu__link{
   color: var(--grey);
+  -webkit-transition: color 150ms ease-in;
+  -moz-transition: color 150ms ease-in;
+  -ms-transition: color 150ms ease-in;
+  -o-transition: color 150ms ease-in;
+  transition: color 150ms ease-in;
 }
+.menu__link:hover{
+  color: var(--white);
+}
+.menu__link--active{
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+.menu__link--active::before{
+  content: " ";
+  position: absolute;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--orange);
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  border-radius: 10rem;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0.5rem;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+/* 
+!!!!!!!!!!
+          Navigation Menu
+!!!!!!!!!!
+*/
 .nav-menu{
   position: fixed;
   top: 0;
@@ -85,6 +147,11 @@ a{
 .nav-menu--open{
   left: 0;
 }
+/* 
+!!!!!!!!!!
+          Mobile Menu
+!!!!!!!!!!
+*/
 .mobile-menu{
   margin-bottom: 3rem;
 }
@@ -94,6 +161,11 @@ a{
 .mobile-menu__link{
   color: var(--white);
 }
+/* 
+!!!!!!!!!!
+          Navigation Links
+!!!!!!!!!!
+*/
 .nav-menu__links{
   display: flex;
 }
@@ -109,6 +181,11 @@ a{
 .nav-menu__link--border{
 
 }
+/* 
+!!!!!!!!!!
+          Header Links
+!!!!!!!!!!
+*/
 .header__links{
   display: none;
 }
@@ -126,7 +203,21 @@ a{
   -ms-border-radius: 10rem;
   -o-border-radius: 10rem;
   border-radius: 10rem;
+  -webkit-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  -ms-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
+.header__link--border:hover{
+  background-color: var(--white);
+  color: var(--orange);
+}
+/* 
+!!!!!!!!!!
+          Navigation Button
+!!!!!!!!!!
+*/
 .nav__btn{
   background-color: var(--white);
   width: 5rem;
