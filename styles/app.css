@@ -23,10 +23,33 @@ body {
   font-family: "Roboto";
 }
 
-
 a{
   text-decoration: none;
   
+}
+
+/*
+!!!!!!!!!!
+          Component
+!!!!!!!!!!
+*/
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--dark);
+  width: 18rem;
+  height: 5rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  border-radius: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto Medium";
 }
 
 /*
@@ -39,7 +62,7 @@ a{
   background: linear-gradient(rgba(59,55,53,0.5), rgba(59,55,53,0.5)), url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
-  min-height: 55rem;
+  min-height: 85vh;
   border-bottom-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
 }
@@ -186,16 +209,16 @@ a{
           Header Links
 !!!!!!!!!!
 */
-.header__links{
+.nav__links{
   display: none;
 }
-.header__link{
+.nav__link{
   color: var(--white);
   font-family: "Roboto Medium";
   margin-left: 1.5rem;
 
 }
-.header__link--border{
+.nav__link--border{
   border: 1px solid var(--white);
   padding: 1rem 2.5rem;
   -webkit-border-radius: 10rem;
@@ -209,7 +232,7 @@ a{
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
-.header__link--border:hover{
+.nav__link--border:hover{
   background-color: var(--white);
   color: var(--orange);
 }
@@ -290,4 +313,30 @@ a{
   -ms-transform: translateY(-8px) rotate(-45deg);
   -o-transform: translateY(-8px) rotate(-45deg);
   transform: translateY(-8px) rotate(-45deg);
+}
+/* 
+!!!!!!!!!!
+          Header Content
+!!!!!!!!!!
+*/
+.header-content{
+  text-align: center;
+  color: var(--white);
+  margin-top: 4rem;
+}
+.header-content__title{
+  font-family: "Archivo Black";
+  font-size: 4.8rem;
+  line-height: 1.2;
+  margin: 0 auto 3rem auto;
+  max-width: 35rem;
+
+}
+.header-content__caption{
+  font-size: 1.8rem;
+  max-width: 34rem;
+  margin: 0 auto 2rem auto;
+}
+.header-content__link{
+  background-color: var(--orange);
 }
