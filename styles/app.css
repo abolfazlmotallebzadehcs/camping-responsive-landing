@@ -4,11 +4,12 @@
 !!!!!!!!!!
 */
 :root{
-  --orange:#E76F51;
+  --primary-color: #E76F51;
+  --secondary-color: #F8E1DB;
+  --app-bg: #FAF4F2;
   --white: #fff;
   --grey: #D2D2D2;
   --dark: #3B3735;
-  --app-bg: #FAF4F2;
   --primary-font: "Roboto", Arial, Helvetica, sans-serif;
   --primary-font-md: "Roboto Medium", Arial, Helvetica, sans-serif;
   --secondary-font: "Archivo Black", Arial, Helvetica, sans-serif;
@@ -135,9 +136,9 @@ a{
 .menu__link--active::before{
   content: " ";
   position: absolute;
-  width: 2.5rem;
+  width: 3rem;
   height: 0.3rem;
-  background-color: var(--orange);
+  background-color: var(--primary-color);
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
   -ms-border-radius: 10rem;
@@ -148,7 +149,7 @@ a{
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 0.5rem;
+  top: 0.8rem;
   z-index: -1;
   right: 0;
   left: 0;
@@ -216,7 +217,7 @@ a{
   margin: auto;
   width: 0;
   height: 0.3rem;
-  background-color: var(--orange);
+  background-color: var(--primary-color);
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
   -ms-border-radius: 10rem;
@@ -257,7 +258,7 @@ a{
 }
 .nav-menu__link:hover{
   background-color: var(--white);
-  color: var(--orange);
+  color: var(--primary-color);
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   -ms-transition: all 100ms ease-in;
@@ -297,7 +298,7 @@ a{
 }
 .nav__link--border:hover{
   background-color: var(--white);
-  color: var(--orange);
+  color: var(--primary-color);
 }
 /* 
 !!!!!!!!!!
@@ -322,7 +323,7 @@ a{
   display: block;
   width: 2.5rem;
   height: 0.4rem;
-  background-color: var(--orange);
+  background-color: var(--primary-color);
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
@@ -346,7 +347,7 @@ a{
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   border-radius: 1rem;
-  background-color: var(--orange);
+  background-color: var(--primary-color);
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
@@ -401,7 +402,7 @@ a{
   margin: 0 auto 1rem auto;
 }
 .header-content__link{
-  background-color: var(--orange);
+  background-color: var(--primary-color);
 }
 
 /*
@@ -438,7 +439,7 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
   color: var(--dark);
 
 }
@@ -451,7 +452,6 @@ a{
   margin: 1.8rem 0 0.8rem 0;
 }
 .service__caption{
-
 }
 
 /*
@@ -463,9 +463,11 @@ a{
 .destinations{
   text-align: center;
   padding: 4rem 0;
+  color: var(--dark);
 }
 .destinations__logo{
-
+  width: 8rem;
+  height: 8rem;
 }
 .destinations__title{
   font-family: var(--secondary-font);
@@ -474,7 +476,10 @@ a{
   margin: 2rem auto;
 }
 .destinations__places{
-
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .place{
   background-color: var(--white);
@@ -483,9 +488,14 @@ a{
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
   border-radius: 2rem;
-  padding: 3rem;
+  padding: 2rem;
   color: var(--dark);
   margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 27rem;
+  flex-grow: 1;
+  overflow: hidden;
 }
 .place__banner{
   position: relative;
@@ -520,10 +530,12 @@ a{
   cursor: pointer;
 }
 .place__like-icon{
-
+  margin-left: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 .place__like-icon--fill{
-
+  fill: var(--primary-color);
+  stroke: var(--white);
 }
 .place__price{
   background-color: var(--white);
@@ -542,13 +554,17 @@ a{
 }
 .place__price-text{
   font-family: var(--primary-font-md);
-  color: var(--orange);
+  color: var(--primary-color);
   text-align: center;
 }
 .place__title{
   font-family: var(--secondary-font);
   margin-top: 3rem;
   margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .place__caption{
   margin-bottom: 2rem;
@@ -559,8 +575,8 @@ a{
 
 }
 .destinations__btn{
-  color: var(--orange);
-  border: 1px solid var(--orange);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   background-color: transparent;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
@@ -570,6 +586,87 @@ a{
   margin-top: 2rem;
 }
 .destinations__btn:hover{
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--app-bg);
+  background-color: var(--primary-color);
+}
+
+/*
+!!!!!!!!!!
+          NewsLetter
+!!!!!!!!!!
+*/
+
+.newsletter{
+  background-color: var(--secondary-color);
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 6rem 0;
+}
+.newsletter__content{
+
+}
+.newsletter__title{
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  margin: 1.5rem auto;
+}
+.newsletter__caption{
+  font-family: var(--primary-font-md);
+}
+.newsletter__email-box{
+  position: relative;
+  background-color: var(--white);
+  margin-top: 2rem;
+  height: 7rem;
+  padding: 0 1rem 0 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.newsletter__form{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.newsletter__email-icon{
+  flex-shrink: 0;
+
+}
+.newsletter__input{
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  color: #8D8D8D;
+  padding: 0 1rem 0 2rem;
+  font-size: 1.5rem;
+}
+.newsletter__submit{
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.newsletter__banner{
+
+}
+.newsletter__img{
+  width: 100%;
 }
